@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AireTableViewCell" rowHeight="107" id="KGk-i7-Jjw" customClass="AireTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dvd_frm_choice__normal" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-aa-C0a">
+                        <rect key="frame" x="0.0" y="52" width="375" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="mUR-Eg-ZWr"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_btn_ajt" translatesAutoresizingMaskIntoConstraints="NO" id="8Ux-fc-F6y">
+                        <rect key="frame" x="71" y="67" width="278" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="P3u-Gf-8fM"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_btn_show" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-zh-nqL">
+                        <rect key="frame" x="26" y="64.5" width="40" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="dJX-HI-JPb"/>
+                            <constraint firstAttribute="width" constant="40" id="nnW-Oi-x56"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅空调" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-ZD-g6F">
+                        <rect key="frame" x="5" y="-3" width="180" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="JLU-OR-9Ve"/>
+                            <constraint firstAttribute="height" constant="50" id="a30-tb-2nN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-k8-Gvg">
+                        <rect key="frame" x="31" y="66.5" width="40" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3Um-ul-qnI"/>
+                            <constraint firstAttribute="height" constant="21" id="x0N-Gw-0nJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9yv-2g-L2p">
+                        <rect key="frame" x="79" y="60" width="262" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="edx-BL-DMH"/>
+                        </constraints>
+                    </slider>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1O-G7-5Ud">
+                        <rect key="frame" x="244" y="15" width="55" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Dd2-Nf-r8f"/>
+                            <constraint firstAttribute="width" constant="55" id="gBn-nq-hW1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" backgroundImage="dvd_btn_switch_off"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-uL-jLe">
+                        <rect key="frame" x="319" y="14" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="7bG-lQ-R83"/>
+                            <constraint firstAttribute="width" constant="30" id="Vjc-aq-224"/>
+                        </constraints>
+                        <state key="normal" image="icon_add_normal"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0cu-aa-C0a" secondAttribute="bottom" constant="-2.5" id="3cy-wH-URt"/>
+                    <constraint firstItem="0cu-aa-C0a" firstAttribute="top" secondItem="m1O-G7-5Ud" secondAttribute="bottom" constant="2" id="APR-to-lxC"/>
+                    <constraint firstItem="0cu-aa-C0a" firstAttribute="top" secondItem="5b9-uL-jLe" secondAttribute="bottom" constant="8" id="CAE-Yf-9fe"/>
+                    <constraint firstItem="0cu-aa-C0a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FHG-T1-pnT"/>
+                    <constraint firstItem="8Ux-fc-F6y" firstAttribute="leading" secondItem="Yqf-zh-nqL" secondAttribute="trailing" constant="5" id="Gmd-Qs-gSH"/>
+                    <constraint firstItem="Yqf-zh-nqL" firstAttribute="centerY" secondItem="0cu-aa-C0a" secondAttribute="centerY" id="JcX-6j-fml"/>
+                    <constraint firstItem="9yv-2g-L2p" firstAttribute="centerY" secondItem="8Ux-fc-F6y" secondAttribute="centerY" constant="-2" id="Wdu-dA-hLE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5b9-uL-jLe" secondAttribute="trailing" constant="10" id="ZQ4-0o-yQB"/>
+                    <constraint firstAttribute="trailing" secondItem="0cu-aa-C0a" secondAttribute="trailing" id="ZfX-4d-QRg"/>
+                    <constraint firstItem="8Ux-fc-F6y" firstAttribute="centerY" secondItem="0cu-aa-C0a" secondAttribute="centerY" id="deu-91-Ioh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="m1O-G7-5Ud" secondAttribute="trailing" constant="60" id="myb-9i-dYX"/>
+                    <constraint firstItem="5Gp-k8-Gvg" firstAttribute="centerY" secondItem="Yqf-zh-nqL" secondAttribute="centerY" id="oe7-4o-ZtA"/>
+                    <constraint firstItem="Yqf-zh-nqL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="owr-mB-fzf"/>
+                    <constraint firstItem="0cu-aa-C0a" firstAttribute="top" secondItem="4Ci-ZD-g6F" secondAttribute="bottom" constant="5" id="pUr-uc-ZdC"/>
+                    <constraint firstItem="9yv-2g-L2p" firstAttribute="leading" secondItem="5Gp-k8-Gvg" secondAttribute="trailing" constant="10" id="qrg-yx-l09"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9yv-2g-L2p" secondAttribute="trailing" constant="20" id="v5t-7I-PbR"/>
+                    <constraint firstItem="5Gp-k8-Gvg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="wkn-Ri-KWJ"/>
+                    <constraint firstItem="4Ci-ZD-g6F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="x2h-lN-Y7H"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8Ux-fc-F6y" secondAttribute="trailing" constant="10" id="xlO-qR-UFV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="AddAireBtn" destination="5b9-uL-jLe" id="4lx-tK-aCc"/>
+                <outlet property="AireConstraint" destination="myb-9i-dYX" id="OUn-Dw-FhP"/>
+                <outlet property="AireNameLabel" destination="4Ci-ZD-g6F" id="Bys-9D-LDu"/>
+                <outlet property="AireSlider" destination="9yv-2g-L2p" id="m74-0r-nHa"/>
+                <outlet property="AireSwitchBtn" destination="m1O-G7-5Ud" id="j83-HB-Tzg"/>
+                <outlet property="supImageViewHeight" destination="mUR-Eg-ZWr" id="apL-2C-inB"/>
+                <outlet property="temperatureLabel" destination="5Gp-k8-Gvg" id="J1b-ls-SkR"/>
+            </connections>
+            <point key="canvasLocation" x="-322.5" y="46"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dvd_btn_switch_off" width="34" height="23"/>
+        <image name="dvd_frm_choice__normal" width="336" height="47"/>
+        <image name="icon_add_normal" width="15" height="15"/>
+        <image name="ktv_btn_ajt" width="269" height="20"/>
+        <image name="ktv_btn_show" width="36" height="20"/>
+    </resources>
+</document>

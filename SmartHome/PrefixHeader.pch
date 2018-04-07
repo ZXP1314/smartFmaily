@@ -1,0 +1,135 @@
+//
+//  PrefixHeader.pch
+//  SmartHome
+//
+//  Created by Brustar on 16/6/30.
+//  Copyright © 2016年 Brustar. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "public.h"
+#endif
+
+#endif /* PrefixHeader_pch */
+
+#define FX(view)    view.frame.origin.x
+#define FY(view)    view.frame.origin.y
+#define FW(view)    view.frame.size.width
+#define FH(view)    view.frame.size.height
+
+//设备大类
+#define LightType         @"灯光"
+#define EnvironmentType   @"环境"
+#define CurtainType       @"窗帘"
+#define MultiMediaType    @"影音"
+#define IntelligentType   @"智能单品"
+#define SecurityType      @"安防"
+#define SensorType        @"感应器"
+
+//蒙版
+#define ShowMaskViewHomePageChatBtn         @"ShowMaskViewHomePageChatBtn"           //是否显示过蒙版
+#define ShowMaskViewHomePageEnterChat       @"ShowMaskViewHomePageEnterChat"
+#define ShowMaskViewHomePageEnterFamily     @"ShowMaskViewHomePageEnterFamily"
+#define ShowMaskViewHomePageScene           @"ShowMaskViewHomePageScene"
+#define ShowMaskViewHomePageDevice          @"ShowMaskViewHomePageDevice"
+#define ShowMaskViewHomePageCloud           @"ShowMaskViewHomePageCloud"
+#define ShowMaskViewChatView                @"ShowMaskViewChatView"
+#define ShowMaskViewFamilyHome              @"ShowMaskViewFamilyHome"
+#define ShowMaskViewFamilyHomeDetail        @"ShowMaskViewFamilyHomeDetail"
+#define ShowMaskViewScene                   @"ShowMaskViewScene"
+#define ShowMaskViewSceneAdd                @"ShowMaskViewSceneAdd"
+#define ShowMaskViewSceneDetail             @"ShowMaskViewSceneDetail"
+#define ShowMaskViewDevice                  @"ShowMaskViewDevice"
+#define ShowMaskViewDeviceAir               @"ShowMaskViewDeviceAir"
+#define ShowMaskViewLeftView                @"ShowMaskViewLeftView"
+#define ShowMaskViewSettingView             @"ShowMaskViewSettingView"
+#define ShowMaskViewAccessControl           @"ShowMaskViewAccessControl"
+#define IsDemo                              @"IsDemo"
+
+typedef enum : NSUInteger {
+    
+    HomePageChatBtn,          //  主页聊天按钮
+    HomePageEnterChat,        //  进入聊天
+    ChatView,                 //  聊天页面
+    HomePageEnterFamily,      //  进入家庭
+    FamilyHome,               //  家庭首页
+    FamilyHomeDetail,         //  家庭详情
+    HomePageScene,            //  首页场景
+    SceneHome,                //  场景首页
+    SceneHomeAdd,             //  添加场景
+    SceneDetail,              //  场景详情
+    HomePageDevice,           //  首页设备
+    DeviceHome,               //  设备首页
+    DeviceAir,                //  设备空调
+    HomePageCloud,            //  首页云
+    LeftView,                 //  侧滑页面
+    SettingView,              //  设置页面
+    AccessControl,            //  权限控制
+    
+} PageTye;
+
+#define UI_SCREEN_WIDTH       ([[UIScreen mainScreen] bounds].size.width)
+#define UI_SCREEN_HEIGHT      ([[UIScreen mainScreen] bounds].size.height)
+#define UD                    [NSUserDefaults standardUserDefaults]
+#define NC                    [NSNotificationCenter defaultCenter]
+
+#define RGB(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+#define TabbarHeight 80
+
+#define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
+#define Size(w, h)                          CGSizeMake(w, h)
+#define Point(x, y)                         CGPointMake(x, y)
+#define IOSVersion                          [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IsiOS7Later                         !(IOSVersion < 7.0)
+#define Is4Inch                             [Utilities is4InchScreen]
+
+#ifdef DEBUG
+
+#define ENABLE_ASSERT_STOP          1
+#define ENABLE_DEBUGLOG             1
+
+#endif
+
+// 颜色日志
+#define XCODE_COLORS_ESCAPE_MAC @"\033["
+#define XCODE_COLORS_ESCAPE_IOS @"\xC2\xA0["
+#define XCODE_COLORS_ESCAPE  XCODE_COLORS_ESCAPE_MAC
+#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+#define LogBlue(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,150,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogRed(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg250,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogGreen(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,235,30;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+
+// debug log
+#ifdef ENABLE_DEBUGLOG
+#define APP_DebugLog(...) NSLog(__VA_ARGS__)
+#define APP_DebugLogBlue(...) LogBlue(__VA_ARGS__)
+#define APP_DebugLogRed(...) LogRed(__VA_ARGS__)
+#define APP_DebugLogGreen(...) LogGreen(__VA_ARGS__)
+#else
+#define APP_DebugLog(...) do { } while (0);
+#define APP_DebugLogBlue(...) do { } while (0);
+#define APP_DebugLogRed(...) do { } while (0);
+#define APP_DebugLogGreen(...) do { } while (0);
+#endif
+
+// log
+#define APP_Log(...) NSLog(__VA_ARGS__)
+
+// assert
+#ifdef ENABLE_ASSERT_STOP
+#define APP_ASSERT_STOP                     {LogRed(@"APP_ASSERT_STOP"); NSAssert1(NO, @" \n\n\n===== APP Assert. =====\n%s\n\n\n", __PRETTY_FUNCTION__);}
+#define APP_ASSERT(condition)               {NSAssert(condition, @" ! Assert");}
+#else
+#define APP_ASSERT_STOP                     do {} while (0);
+#define APP_ASSERT(condition)               do {} while (0);
+#endif

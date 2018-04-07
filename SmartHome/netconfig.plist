@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>C4Port</key>
+	<real>9000</real>
+	<key>crestronPort</key>
+	<integer>40000</integer>
+	<key>tcpPort</key>
+	<real>8000</real>
+	<key>tcpServer</key>
+	<string>tp.e-cloudcn.com</string>
+	<key>httpPort</key>
+	<real>8082</real>
+	<key>httpServer</key>
+	<string>h5.e-cloudcn.com</string>
+	<key>httpsPort</key>
+	<real>8083</real>
+	<key>SmartHomehttpSever</key>
+	<string>app.e-cloudcn.com</string>
+</dict>
+</plist>
